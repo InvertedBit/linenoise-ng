@@ -361,8 +361,8 @@ class Utf32String {
 };
 
 class Utf8String {
-  Utf8String (const Utf8String&) = delete;
-  Utf8String& operator= (const Utf8String&) = delete;
+  Utf8String (const Utf8String&) { throw; }
+  Utf8String& operator= (const Utf8String&) { throw; }
 
   public:
     explicit
