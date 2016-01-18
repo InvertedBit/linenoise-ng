@@ -30,7 +30,7 @@ int main (int argc, char** argv) {
     }
   }
   
-  const char* file = "./history";
+  const char* file = "./history.txt";
 
   linenoiseHistoryLoad(file);
   linenoiseSetCompletionCallback(completionHook);
