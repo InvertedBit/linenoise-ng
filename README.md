@@ -30,58 +30,10 @@ library uses C++ internally, but to the user it provides a pure C
 interface that is compatible with the original linenoise API.
 C interface. 
 
-## Requirements
-
-To build this library, you will need a C++11-enabled compiler and
-some recent version of CMake.
-
 ## Build instructions
 
-To build this library on Linux, first create a build directory
-
-```bash
-mkdir -p build
-```
-
-and then build the library:
-
-```bash
-(cd build && cmake -DCMAKE_BUILD_TYPE=Release .. && make)
-```
-
-To build and install the library at the default target location, use
-
-```bash
-(cd build && cmake -DCMAKE_BUILD_TYPE=Release .. && make && sudo make install)
-```
-
-The default installation location can be adjusted by setting the `DESTDIR`
-variable when invoking `make install`:
-
-```bash
-(cd build && make DESTDIR=/tmp install)
-```
-
-To build the library on Windows, use these commands in an MS-DOS command 
-prompt:
-
-```
-md build
-cd build
-```
-
-After that, invoke the appropriate command to create the files for your
-target environment:
-
-* 32 bit: `cmake -G "Visual Studio 12 2013" -DCMAKE_BUILD_TYPE=Release ..`
-* 64 bit: `cmake -G "Visual Studio 12 2013 Win64" -DCMAKE_BUILD_TYPE=Release ..`
-
-After that, open the generated file `linenoise.sln` from the `build`
-subdirectory with Visual Studio.
-
-
-*note: the following sections of the README.md are from the original
-linenoise repository and are partly outdated*
+Simply include all sources (except for `example.cpp`) in your
+project.
 
 ## Can a line editing library be 20k lines of code?
 
@@ -125,8 +77,8 @@ library appears to work everywhere Salvatore tried to use it, and now
 can work even on ANSI.SYS compatible terminals, since no VT220
 specific sequences are used anymore.
 
-The original library has currently about 1100 lines of code. In order
-to use it in your project just look at the *example.c* file in the
+The original library has currently about 4100 lines of code. In order
+to use it in your project just look at the *example.cpp* file in the
 source distribution, it is trivial. Linenoise is BSD code, so you can
 use both in free software and commercial software.
 
